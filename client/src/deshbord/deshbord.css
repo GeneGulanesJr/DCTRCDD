@@ -1,0 +1,19 @@
+/* .sidebar, .off-canvas-sidebar{
+    background: #e14eca !important;
+    background: -webkit-gradient(linear, left bottom, left top, from(#e14eca), to(#e14eca));
+    background: linear-gradient(0deg, #e14eca 0%, #e14eca 100%);
+} */
+
+
+.sidebar[data="blue"], .off-canvas-sidebar[data="blue"] {
+    background: #0e1635 !important;
+    background: -webkit-gradient(linear, left bottom, left top, from(#3578E5), to(#1D3C78)) !important;
+    background: linear-gradient(0deg, #3578E5 0%, #1D3C78 100%) !important;
+}
+.nav-link p {
+     font-size: 12px;
+     font-weight: 600;
+}
+.footer {
+    padding: 32px 0 32px 264px !important;
+}

@@ -1,0 +1,92 @@
+.fixed-top {
+    height: 100px;
+}
+/* .nav-tabs > .nav-item > .nav-link.active {
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    background: #3578E5 !important;
+} */
+.placeColorBlack{
+    color:black !important;
+}
+
+.register-page .squares, .register-page .square, .section.section-signup .squares, .section.section-signup .square {
+    background: #1D3C78 !important;
+    background: -webkit-gradient(linear, left bottom, left top, from(#1D3C78), to(#3578E5)) !important;
+    background: linear-gradient(0deg, #1D3C78, #3578E5 100%) !important;
+}
+.mt-200{
+    margin-top: 200px;
+}
+
+.single_card{    
+    position: relative;
+    border-radius: 5px;
+    background-color: #17A2B8;
+}
+.single_card img {
+    top: 12px;
+    max-width: 100%;
+    position: absolute;
+    right: 18px;
+}
+.bg-white{
+    background-color: white;
+    color: black;
+}
+
+.header_text{
+    font-size: 40px;
+    color: black;
+    font-weight: 700;
+    color: #28A745;
+    font-family: cursive;
+}
+.single_card h1{
+    
+    font-size: 44px;
+    font-weight: 700;
+    color: white;
+}
+
+.single_card p{
+    font-size: 24px;
+    line-height: 0;
+}
+.link{
+    color: white;
+    margin-top: 30px;
+    background: #1591A5;
+    display: block;
+    font-size: 20px;
+    padding: 7px 0;
+    text-align: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.link:hover{
+    color: white;
+}
+.card_2_bg{
+    background-color: #28A745;
+}
+.card_2_link_bg{
+    background-color: #24963E;
+}
+
+.card_3_bg{
+    background-color: #FFC107;
+}
+.card_3_link_bg{
+    background-color: #E5AD06;
+}
+
+.card_4_bg{
+    background-color: #DC3545;
+}
+.card_4_link_bg{
+    background-color: #C6303E;
+}
