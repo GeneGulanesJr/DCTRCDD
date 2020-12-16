@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a78db54-4eaf-4e1d-9848-9b56710fe13d" name="Default Changelist" comment="" />
+    <list default="true" id="2a78db54-4eaf-4e1d-9848-9b56710fe13d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/deshbord/views/AllResident.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/deshbord/views/AllResident.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/deshbord/views/EditResident/EditResident.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/deshbord/views/EditResident/EditResident.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/deshbord/views/Report.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/deshbord/views/Report.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/deshbord/views/UserList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/deshbord/views/UserList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/deshbord/views/UserProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/deshbord/views/UserProfile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/deshbord/views/addResident/ResidentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/deshbord/views/addResident/ResidentForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/views/Index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/views/Index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/residentsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/residentsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,7 +23,11 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1lBs9rfT60LaeKok80qS5Zq7NCT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,11 +47,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607081672756</updated>
-      <workItem from="1607081675546" duration="615000" />
+      <workItem from="1607081675546" duration="1105000" />
+      <workItem from="1608024171460" duration="4809000" />
+      <workItem from="1608082122807" duration="7917000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

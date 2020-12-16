@@ -67,6 +67,8 @@ const EditFlight =()=>{
       })
 
     }
+
+
     return (
       <>
         <div className="content">
@@ -94,9 +96,12 @@ const EditFlight =()=>{
                       <thead className="text-success">
                         <tr>
                           <th>Name</th>
-                          <th>Email </th>
-                          <th>Phone tailNumber  </th>
+                          <th>Nature of Admission </th>
+                          <th>Patient Status  </th>
+                          <th>Day Admitted</th>
+                          <th>Patient Reports</th>
                           <th>Action</th>
+
                         </tr>
                       </thead>
                       <tbody>    
@@ -108,8 +113,10 @@ const EditFlight =()=>{
                          
                           <tr>
                             <td> {single.name} </td>
-                            <td > {single.email} </td>
-                            <td > {single.phoneNumber} </td>
+                            <td > {single.natureOfAdmission} </td>
+                            <td > {single.patientStatus} </td>
+                            <td > {single.dateOfAdmission}</td>
+                            <td > {}</td>
                             <td > <div class="dropdown">
                                 <a cla ss="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <Button color="success" size="sm">Action</Button>

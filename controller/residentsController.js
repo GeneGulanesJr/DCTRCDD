@@ -12,7 +12,7 @@ const createResidents=(req,res)=>{
         if(err){
             return res.json({massage:"error ", err:err})
         }else {
-            return res.status(200).json({massage:"Resident added successfull", clients:clients})
+            return res.status(200).json({massage:"Resident added successfully", clients:clients})
         }
     })
 }
@@ -23,28 +23,28 @@ const getAllResidents=(req, res)=>{
         res.status(200).json({residents:residents})
     })
     .catch(err=>{
-        res.status(500).json({massage:"server error occurd"})
+        res.status(500).json({massage:"server error occurred"})
     })
 }
 const editResidents= (req, res)=>{
     residentsModel.findByIdAndUpdate(req.params.id, {...req.body} , (err, result)=>{
         if(err){
             console.log(err)
-            return res.status({massage:"server erroro occured ! "})
+            return res.status({massage:"server error occurred ! "})
         }
         console.log(result)
-        return res.status(200).json({massage:"Updated successfull !", result:result})
+        return res.status(200).json({massage:"Updated successfully !", result:result})
     })
 }
 const deleteResidents=(req, res)=>{
     residentsModel.findByIdAndDelete(req.params.id)
     .then(deletedResidents=>{
         // console.log(deletedResidents)
-        return res.status(200).json({massage:"Residents  updated successfull ! "})
+        return res.status(200).json({massage:"Residents  updated successfully ! "})
     })
     .catch(err=>{
         console.log(err)
-        return res.status(500).json({massage:"server erroro occured"})
+        return res.status(500).json({massage:"server error occurred"})
     })
 }
 
@@ -59,34 +59,64 @@ const getSingleResidents=(req, res)=>{
     .catch(err=>{
         console.log(err)
 
-        return res.status(500).json({massage:"Server error occured "})
+        return res.status(500).json({massage:"Server error occurred "})
     })
 }
 const countGender=(req, res)=>{
     residentsModel.find()
     .then(allResident=>{
-        let adultMale=0
-        let minorMale=0
-        let adultFemale=0
-        let minorFemale=0
+        let allResidents=0
+        let adultFemaleSingle = 0
+        let adultFemalePoly =0
+        let adultMaleSingle=0
+        let adultMalePoly=0
+        let minorFemaleSingle=0
+        let minorFemalePoly=0
+        let minorMaleSingle=0
+        let minorMalePoly=0
+        let activePatient=0
+        let dischargePatient=0
         allResident.filter(singleResident=>{
             console.log(singleResident.gender)
-            if(singleResident.gender=== 'Adult Female'){
-                adultFemale=adultFemale+1
+            if(singleResident.gender=== 'Adult Female'&&singleResident.typeOfUse == 'Single'){
+                adultFemaleSingle=adultFemaleSingle+1
             }
-            if(singleResident.gender==='Minor Female'){
-                minorFemale=minorFemale+1
+            if(singleResident.gender=== 'Adult Female'&&singleResident.typeOfUse == 'Poly'){
+                adultFemalePoly=adultFemalePoly+1
             }
-            if(singleResident.gender==='Adult Male'){
-                adultMale=adultMale+1
+            if(singleResident.gender==='Minor Female'&&singleResident.typeOfUse == 'Single'){
+                minorFemaleSingle=minorFemaleSingle+1
             }
-            if(singleResident.gender==='Minor Male'){
-                minorMale=minorMale+1
+            if(singleResident.gender==='Minor Female'&&singleResident.typeOfUse == 'Poly'){
+                minorFemalePoly=minorFemalePoly+1
+            }
+            if(singleResident.gender==='Adult Male'&&singleResident.typeOfUse == 'Single'){
+                adultMaleSingle=adultMaleSingle+1
+            }
+            if(singleResident.gender==='Adult Male'&&singleResident.typeOfUse == 'Poly'){
+                adultMalePoly=adultMalePoly+1
+            }
+            if(singleResident.gender==='Minor Male'&&singleResident.typeOfUse == 'Single' ){
+                minorMaleSingle=minorMaleSingle+1
+            }
+            if(singleResident.gender==='Minor Male'&&singleResident.typeOfUse == 'Poly' ){
+                minorMalePoly=minorMalePoly+1
+            }
+            if(allResidents.gender=== 'Adult Female','Minor Female','Adult Male','Minor Male'){
+                allResidents=allResidents+1
+            }
+            if(allResidents.patientStatus === 'Discharge'){
+                dischargePatient=dischargePatient+1
+            }
+            if(allResidents.patientStatus === 'Admitted'){
+                activePatient=activePatient+1
             }
         })
-        res.status(200).json({adultFemale,minorFemale, adultMale, minorMale})
+        res.status(200).json({dischargePatient,activePatient,allResidents,adultFemaleSingle,adultFemalePoly,minorFemaleSingle,minorFemalePoly, adultMaleSingle,adultMalePoly, minorMaleSingle,minorMalePoly})
     })
 }
+
+
 const assending=(req, res)=>{
     residentsModel.find()
     .then(allResident=>{            
@@ -171,5 +201,6 @@ module.exports={
     countGender,
     assending,
     dessending,
+
     search
 }

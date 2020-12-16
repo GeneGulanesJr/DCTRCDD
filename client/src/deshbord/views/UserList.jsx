@@ -70,8 +70,8 @@ constructor(){
                           <tr>
                             <td> {single.name} </td>
                             <td> {single.email} </td>
-                            <td> {single.isActive ?"Active":"Blocked"} </td>
-                            <td> <Button onClick={this.toggleStatus.bind(this, single._id)}  color="warning" size="sm">  {single.isActive ?"Block":"Re Active"} </Button> </td>
+                            <td> {single.isActive ?"Activated":"Deactivated"} </td>
+                            <td> <Button onClick={this.toggleStatus.bind(this, single._id)}  color="warning" size="sm">  {single.isActive ?"Deactivate":"Re-Enable"} </Button> </td>
                           </tr>
                         )
                       })}

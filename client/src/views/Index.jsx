@@ -9,6 +9,7 @@ import Footer from "components/Footer/Footer.jsx";
 import JavaScript from "views/IndexSections/JavaScript.jsx";
 import Examples from "views/IndexSections/Examples.jsx";
 import NucleoIcons from "views/IndexSections/NucleoIcons.jsx";
+import Statusreport from "./IndexSections/statusreport";
 
 
 class Index extends React.Component {
@@ -28,6 +29,7 @@ class Index extends React.Component {
             <JavaScript />
             <NucleoIcons />
             <Examples />
+            <Statusreport />
           </div>
           <Footer />
         </div>

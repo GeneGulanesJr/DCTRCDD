@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+
 
 // reactstrap components
 import {
@@ -11,13 +12,16 @@ import {
   Col
 } from "reactstrap";
 import JWTDecoder from 'jwt-decode'
+import axios from "axios";
+
+
 class UserProfile extends React.Component {
 
    logout= ()=>{
      localStorage.removeItem('resident-token')
      window.location.href='/'
   }
-  
+
   render() {
     return (
       <>
@@ -38,7 +42,8 @@ class UserProfile extends React.Component {
                         JWTDecoder(window.localStorage.getItem('resident-token')).name:"Jack"
                         }
                       </h5>
-                      
+                    <h5>Resident Profiled</h5>
+                      <h5>{2}</h5>
                       <h5 className="title">
                         {window.localStorage.getItem('resident-token')?
                         JWTDecoder(window.localStorage.getItem('resident-token')).email:"example@gmial.com"

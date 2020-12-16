@@ -90,9 +90,11 @@ class GenereateInvoice extends React.Component{
                       <thead className="text-primary">
                         <tr>
                           <th>Name</th>
-                          <th>Email </th>
-                          <th>Phone  </th>
-                          <th>Action </th>
+                          <th>Nature of Admission </th>
+                          <th>Patient Status  </th>
+                          <th>Day Admitted</th>
+                          <th>Action</th>
+
                         </tr>
                       </thead>
                       <tbody>
@@ -100,8 +102,9 @@ class GenereateInvoice extends React.Component{
                        return(
                           <tr>
                             <td> {single.name} </td>
-                            <td > {single.email} </td>
-                            <td > {single.phoneNumber} </td>
+                            <td > {single.natureOfAdmission} </td>
+                            <td > {single.patientStatus} </td>
+                            <td > {single.dateOfAdmission}</td>
                             <td > <div class="dropdown">
                                 <a cla ss="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                   <Button color="success" size="sm">Action</Button>

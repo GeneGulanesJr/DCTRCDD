@@ -1,9 +1,10 @@
 import React from 'react'
 import { Card, CardBody , FormGroup , Col, Row, Form, Input, Button ,  } from 'reactstrap'
 import Axios from 'axios'
+import axios from "axios";
 class ResidentForm  extends React.Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state={
         name:'',
         dateOfAdmission:'',
@@ -22,6 +23,8 @@ class ResidentForm  extends React.Component {
         typeOfUse:'',
         costSharing:'',
         patientStatus:'',
+        patientReport:'',
+
     }
     this.changeHandler=this.changeHandler.bind(this)
     this.submitHandler=this.submitHandler.bind(this)
@@ -31,6 +34,26 @@ class ResidentForm  extends React.Component {
     this.setState({
       [event.target.name]:event.target.value
     })
+  }
+  onFormSubmit(e){
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append('myfile',this.state.file);
+    const config = {
+      headers: {
+        'content-type': 'multipart/form-data'
+      }
+    };
+
+    axios.post("http://localhost:5000/upload",formData,config)
+        .then((response) => {
+          alert("The file is successfully uploaded");
+        }).catch((error) => {
+    });
+  }
+
+  onChange(e) {
+    this.setState({file:e.target.files});
   }
   submitHandler=()=>{
 
@@ -45,6 +68,11 @@ class ResidentForm  extends React.Component {
       })
     console.log(this.state)
     })
+  }
+
+
+  onChange(e) {
+    this.setState({file:e.target.files});
   }
   render(){
     
@@ -262,14 +290,24 @@ class ResidentForm  extends React.Component {
                           </select>
                         </FormGroup>
                       </Col>
+                      <Col className="px-md-1" md="6">
+                        <FormGroup>
+                          <label>Patient Report </label>
+                          <form onSubmit={this.onFormSubmit}>
+                            <input type="file" className="custom-file-input" name="myImage" onChange= {this.onChange} />
+                            {console.log(this.state.file)}
+                            <button className="upload-button" type="submit">Upload to DB</button>
+                          </form>
+                        </FormGroup>
+                      </Col>
                     </Row>
                     <Button onClick={this.submitHandler}  color="success" > Create </Button>
                   </Form>
                 </CardBody>
                 <p style={{visibility:"hidden" , lineHeight:"0"}}>
-                ownload all the team icons you need. Choose between 17309 team icons in both vector SVG and PNG format. Related icons include group icons, people iconsownload all the team icons you need. Choose between 17309 team icons in both vector SVG and PNG format. Related icons include group icons, people icons
-                ownload all the team icons you need. Choose between 17309 team icons in both vector SVG and PNG format. Related icons include group icons, people iconsownload all the team icons you need. Choose between 17309 team icons in both vector SVG and PNG format. Related icons include group icons, people icons
-                ownload all the team icons you need. Choose between 17309 team icons in both vector SVG and PNG format. Related icons include group icons, people iconsownload all the team icons you need. Choose between 17309 team icons in both vector SVG and PNG format. Related icons include group icons, people icons
+                Download all the team icons you need. Choose between 17309 team icons in both vector SVG and PNG format. Related icons include group icons, people iconsownload all the team icons you need. Choose between 17309 team icons in both vector SVG and PNG format. Related icons include group icons, people icons
+                Download all the team icons you need. Choose between 17309 team icons in both vector SVG and PNG format. Related icons include group icons, people iconsownload all the team icons you need. Choose between 17309 team icons in both vector SVG and PNG format. Related icons include group icons, people icons
+                Download all the team icons you need. Choose between 17309 team icons in both vector SVG and PNG format. Related icons include group icons, people iconsownload all the team icons you need. Choose between 17309 team icons in both vector SVG and PNG format. Related icons include group icons, people icons
                 </p>
             </Card>
         </div>

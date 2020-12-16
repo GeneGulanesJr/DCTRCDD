@@ -18,7 +18,7 @@ app.use(morgan('dev'))
 
 mongoose.connect('mongodb+srv://gene:1600062@projectmanagement.uf8ag.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority',{useNewUrlParser:true, useFindAndModify:false, useUnifiedTopology:true})
 .then(()=>{
-	console.log("mongodb connected successfull ")
+	console.log("mongodb connected successfully")
 })
 .catch(err=>{
 	console.log(err)
