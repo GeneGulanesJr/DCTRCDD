@@ -16,7 +16,7 @@ app.use(morgan('dev'))
 
 // connect database
 
-mongoose.connect('mongodb+srv://gene:1600062@projectmanagement.uf8ag.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority',{useNewUrlParser:true, useFindAndModify:false, useUnifiedTopology:true})
+mongoose.connect('mongodb+srv://USERNAME:PASSWORD@PROJECTLINK.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority',{useNewUrlParser:true, useFindAndModify:false, useUnifiedTopology:true})
 .then(()=>{
 	console.log("mongodb connected successfully")
 })
